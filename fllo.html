@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florence Mwita - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light background */
+            color: #1e293b; /* Dark text */
+        }
+        .section-padding {
+            padding: 4rem 1rem; /* Default padding for sections */
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem; /* Larger padding on medium screens and up */
+            }
+        }
+        .nav-link:hover {
+            color: #3b82f6; /* Blue on hover */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid #cbd5e1; /* slate-300 */
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            background-color: #3b82f6; /* blue-500 */
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+        .scroll-down-arrow {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 py-4">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-8">
+            <a href="#home" class="text-2xl font-bold text-blue-600">Florence Mwita</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#resume" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Resume</a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Projects</a>
+                <a href="#labs" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Lab Challenges</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+            <a href="#resume" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Resume</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projects</a>
+            <a href="#labs" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Lab Challenges</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:bg-gray-100 rounded-md transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section-padding min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+        <div class="animate-fade-in">
+            <!-- Professional Photo Placeholder -->
+            <img src="https://placehold.co/200x200/4a90e2/ffffff?text=Your+Photo" alt="Musimbi Florence Mwita" class="rounded-full w-48 h-48 object-cover mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-3 leading-tight">Musimbi Florence Mwita</h1>
+            <p class="text-xl md:text-3xl font-medium opacity-90 mb-8">Student | Aspiring Software Engineer | Passionate about Cybersecurity & Web Development</p>
+            <div class="flex justify-center space-x-6 text-2xl md:text-3xl">
+                <a href="https://www.linkedin.com/in/florence-mwita" target="_blank" class="hover:text-blue-200 transition duration-300" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Flo254" target="_blank" class="hover:text-blue-200 transition duration-300" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                <a href="mailto:florencemwita94@gmail.com" class="hover:text-blue-200 transition duration-300" aria-label="Email Address"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+254742964267" class="hover:text-blue-200 transition duration-300" aria-label="Phone Number"><i class="fas fa-phone"></i></a>
+            </div>
+        </div>
+        <!-- Scroll Down Cue -->
+        <div class="absolute bottom-10">
+            <a href="#resume" class="text-white text-4xl scroll-down-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section-padding bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Resume</h2>
+
+            <!-- Academic Background -->
+            <div class="card mb-8">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4 flex items-center"></i>Academic Background</h3>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">Bachelor of Science in Software Engineering</h4>
+                    <p class="text-gray-600">Kirinyaga University, Kenya — 2024 – 2028</p>
+                    <p class="text-gray-700 mt-1">Relevant Courses: Data Structures and Algorithms, Database Systems, Web Technologies, Cybersecurity Fundamentals</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">KCSE Certificate</h4>
+                    <p class="text-gray-600">Asumbi Girls High School — 2020 – 2023</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">Primary Education Certificate</h4>
+                    <p class="text-gray-600">Taranganya Boarding School — Completed in 2019</p>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="card mb-8">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4 flex items-center"></i>Experience</h3>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">Portfolio Website Development</h4>
+                    <p class="text-gray-600">Personal Project</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-1">
+                        <li>Designed and developed a responsive personal portfolio website using HTML and CSS, showcasing skills in front-end development and design principles.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">School Navigation Software Design</h4>
+                    <p class="text-gray-600">Academic Work</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-1">
+                        <li>Created a conceptual design for a school navigation software, utilizing map-based tools to enhance user experience and wayfinding.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">AI-Powered E-learning Platform (Conceptual)</h4>
+                    <p class="text-gray-600">Academic Work</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-1">
+                        <li>Developed detailed documentation and mockups for a simple AI-powered e-learning platform, outlining features and user flow.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4 class="text-lg font-medium">Cybersecurity Lab Challenges</h4>
+                    <p class="text-gray-600">Academic/Self-Learning</p>
+                    <ul class="list-disc list-inside text-gray-700 mt-1">
+                        <li>Actively participated in various Capture-The-Flag (CTF) style labs, applying fundamental cybersecurity concepts to solve real-world challenges.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="card mb-8">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4 flex items-center"></i>Certifications (Ongoing)</h3>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Ethical Hacking – Cisco Networking Academy</li>
+                    <li>Software Development Program – Power Learning Project</li>
+                </ul>
+            </div>
+
+            <!-- Skills -->
+            <div class="card">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4 flex items-center"></i>Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="text-lg font-medium mb-2">Programming Languages:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>SQL (Basic)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium mb-2">Tools & Platforms:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>GitHub</li>
+                            <li>Netlify</li>
+                            <li>VS Code</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium mb-2">Cybersecurity Tools:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Wireshark</li>
+                            <li>Burp Suite</li>
+                            <li>dig</li>
+                            <li>nmap</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-medium mb-2">Soft Skills:</h4>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>Teamwork</li>
+                            <li>Time Management</li>
+                            <li>Problem-Solving</li>
+                            <li>Research</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="card flex flex-col">
+                    <img src="https://placehold.co/600x400/e0e7ff/3b82f6?text=Portfolio+Website" alt="Portfolio Website Screenshot" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Responsive Portfolio Website</h3>
+                    <p class="text-gray-700 mb-3 flex-grow">This website serves as my online resume and portfolio, showcasing my skills in web development and design. It's built to be fully responsive, ensuring a seamless experience across all devices.</p>
+                    <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Technologies:</span> HTML, CSS</p>
+                    <div class="flex space-x-4 mt-auto">
+                        <a href="https://github.com/Flo254/your-portfolio-repo" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fab fa-github mr-1"></i>Code</a>
+                        <a href="#" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fas fa-external-link-alt mr-1"></i>Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card flex flex-col">
+                    <img src="https://placehold.co/600x400/ffe0e7/e24a90?text=School+Navigation" alt="School Navigation Software Screenshot" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">School Navigation Software (Conceptual Design)</h3>
+                    <p class="text-gray-700 mb-3 flex-grow">A conceptual design for an intuitive map-based application aimed at helping students and visitors navigate large school campuses efficiently. This project focused on user experience and information architecture.</p>
+                    <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Technologies:</span> Figma (for design and mockups), Conceptual understanding of map APIs</p>
+                    <div class="flex space-x-4 mt-auto">
+                        <a href="https://github.com/Flo254/school-navigation-design" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fab fa-github mr-1"></i>Design Docs</a>
+                        <a href="#" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fas fa-external-link-alt mr-1"></i>Figma Prototype</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="card flex flex-col">
+                    <img src="https://placehold.co/600x400/e0fff0/4ae290?text=E-learning+Platform" alt="E-learning Platform Screenshot" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Simple AI-Powered E-learning Platform (Documentation & Mockup)</h3>
+                    <p class="text-gray-700 mb-3 flex-grow">This project involved designing a basic e-learning platform leveraging AI concepts for personalized learning paths. The focus was on architectural planning, feature definition, and user interaction flows.</p>
+                    <p class="text-sm text-gray-600 mb-3"><span class="font-medium">Technologies:</span> Documentation tools (e.g., Markdown), Figma (for mockups)</p>
+                    <div class="flex space-x-4 mt-auto">
+                        <a href="https://github.com/Flo254/e-learning-platform-docs" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fab fa-github mr-1"></i>Docs</a>
+                        <a href="#" target="_blank" class="text-blue-500 hover:text-blue-700 transition duration-300"><i class="fas fa-external-link-alt mr-1"></i>Figma Mockups</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Lab Challenges Section -->
+    <section id="labs" class="section-padding bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Lab Challenges & CTF Writeups</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Lab Challenge 1 -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Network Reconnaissance using Nmap & dig</h3>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Problem Statement:</span> Identifying open ports and services on a target machine, as well as gathering DNS information to understand its network footprint.</p>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Your Approach:</span> I began by using `dig` to perform DNS queries and enumerate subdomains. Following this, I utilized `nmap` for a comprehensive port scan to identify open ports, service versions, and operating system details. I cross-referenced the `nmap` output with `dig` results to build a complete picture of the target.</p>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Tools Used:</span> Wireshark, Burp Suite, dig, nmap</p>
+                    <!-- Screenshot Placeholder -->
+                    <img src="https://placehold.co/600x300/c0d9e6/1e293b?text=Nmap+Screenshot" alt="Nmap Screenshot" class="w-full h-40 object-cover rounded-lg mb-3">
+                    <img src="https://placehold.co/600x300/c0d9e6/1e293b?text=Dig+Screenshot" alt="Dig Screenshot" class="w-full h-40 object-cover rounded-lg mb-3">
+                    <p class="text-gray-700"><span class="font-medium">Key Lessons Learned:</span> Solidified my understanding of fundamental network reconnaissance techniques, the importance of combining different tools for thorough analysis, and how to interpret scan results effectively.</p>
+                </div>
+
+                <!-- Lab Challenge 2 -->
+                <div class="card">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2">Intercepting & Modifying Web Traffic with Burp Suite</h3>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Problem Statement:</span> This lab required intercepting HTTP requests and responses from a web application, modifying parameters, and observing the impact on application behavior to identify potential vulnerabilities.</p>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Your Approach:</span> I configured my browser to proxy traffic through Burp Suite. I then navigated to the target web application, intercepting requests to analyze parameters. I experimented with modifying specific parameters, such as user IDs or input values, to bypass client-side validation or access unauthorized resources.</p>
+                    <p class="text-gray-700 mb-3"><span class="font-medium">Tools Used:</span> Burp Suite (Community Edition)</p>
+                    <!-- Screenshot Placeholder -->
+                    <img src="https://placehold.co/600x300/d0e0c0/1e293b?text=Burp+Suite+Screenshot" alt="Burp Suite Screenshot" class="w-full h-40 object-cover rounded-lg mb-3">
+                    <p class="text-gray-700"><span class="font-medium">Key Lessons Learned:</span> Gained practical experience with web proxy tools, understood the basics of web application security testing, and learned how simple parameter manipulation can lead to vulnerabilities if not properly handled by the server.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-blue-600 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">I'm always open to new opportunities, collaborations, and learning experiences. Feel free to connect with me!</p>
+            <div class="flex flex-wrap justify-center gap-8 text-xl md:text-2xl">
+                <div class="flex flex-col items-center">
+                    <a href="https://www.linkedin.com/in/florence-mwita" target="_blank" class="text-white hover:text-blue-200 transition duration-300 mb-2" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-4xl"></i>
+                    </a>
+                    <span class="font-medium">LinkedIn</span>
+                    <p class="text-sm">Florence Mwita</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a href="https://github.com/Flo254" target="_blank" class="text-white hover:text-blue-200 transition duration-300 mb-2" aria-label="GitHub Profile">
+                        <i class="fab fa-github text-4xl"></i>
+                    </a>
+                    <span class="font-medium">GitHub</span>
+                    <p class="text-sm">Flo254</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a href="mailto:florencemwita94@gmail.com" class="text-white hover:text-blue-200 transition duration-300 mb-2" aria-label="Email Address">
+                        <i class="fas fa-envelope text-4xl"></i>
+                    </a>
+                    <span class="font-medium">Email</span>
+                    <p class="text-sm">florencemwita94@gmail.com</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a href="tel:+254742964267" class="text-white hover:text-blue-200 transition duration-300 mb-2" aria-label="Phone Number">
+                        <i class="fas fa-phone text-4xl"></i>
+                    </a>
+                    <span class="font-medium">Phone</span>
+                    <p class="text-sm">+254 742 964267</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <p>&copy; 2024 Florence Mwita. All rights reserved.</p>
+        <p class="text-sm mt-2">Designed with <i class="fas fa-heart text-red-500"></i> and Tailwind CSS</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
